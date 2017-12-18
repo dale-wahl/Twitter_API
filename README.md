@@ -1,2 +1,3 @@
 # Twitter_API
-A script that takes a list of tweet ids, go gets users who retweeted them and the number of followers of each
+
+This file contains a script I wrote when working on a huge dataset of historic tweets.  I wanted to look at the additional audience that a tweet was exposed to by the users who retweeted it.  The script takes a .csv file and looks for a column named tweet_id that has one tweet id per row.  Then it finds the last 100 users to retweet that particular tweet (Twitter's public API limits it to the last 100) and makes a set of those users.  It then finds the number of followers for each of the users.  And, finally, it builds out a new .csv that has each tweet id along with the retweeters and their total followers.  It makes a few temporary pickle files if the program is killed for some reason that should allow you to pick up where you left off.
